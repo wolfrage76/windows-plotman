@@ -22,3 +22,5 @@ Please contact me at: chia@ifhya.com
 This program requires `psutil`, `pyfakefs`,`texttable`, `windows-curses`, `pyreadline`, `pyyaml`, and `pypsutil`.
 
 Run commend in Windows Powershell: `python plotman.py interactive`
+
+![image](https://user-images.githubusercontent.com/75458290/113492313-8c0ad680-94a4-11eb-93da-e93521dddde3.png)
