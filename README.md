@@ -6,8 +6,10 @@ This is a work in progress.  Please see the original version for linux for addit
 
 https://github.com/ericaltendorf/plotman
 
+Please contact me at: chia@ifhya.com
 
-##  Know issues:
+
+##  Known issues:
 
 - Archiving hasn't been touched
 - IO stats does nto work on windows

@@ -6,6 +6,8 @@ This is a work in progress.  Please see the original version for linux for addit
 
 https://github.com/ericaltendorf/plotman
 
+Please contact me at: chia@ifhya.com
+
 
 ##  Know issues:
 
@@ -19,4 +21,4 @@ https://github.com/ericaltendorf/plotman
 
 This program requires `psutil`, `pyfakefs`,`texttable`, `windows-curses`, `pyreadline`, `pyyaml`, and `pypsutil`.
 
-Run using `python plotman.py interactive`
+Run commend in Windows Powershell: `python plotman.py interactive`
