@@ -2,7 +2,7 @@
 
 This is a tool for managing Chia based on Plotman (https://github.com/ericaltendorf/plotman)
 
-This is a work in progress. Please see the original version for linux for additional info:
+This is a work in progress. Please see the original linux version for additional info:
 
 https://github.com/ericaltendorf/plotman
 
@@ -11,9 +11,9 @@ Please contact me at: chia@ifhya.com
 ## Known issues:
 
 - Archiving hasn't been touched
-- IO stats does nto work on windows
+- IO stats does not work on windows
 - Resizing terminal messes up the curses display
-- Common dir prefix does not work so while dir path is shown
+- Common dir prefix does not work so whole dir path is shown for temps and dest drives
 - Various other issues
 
 ## Installation
