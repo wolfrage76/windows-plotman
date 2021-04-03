@@ -1,0 +1,22 @@
+# `windows plotman`: an attempt to get plotman to work on windows
+
+This is a tool for managing Chia based on Plotman (https://github.com/ericaltendorf/plotman)
+
+This is a work in progress.  Please see the original version for linux for additional info:
+
+https://github.com/ericaltendorf/plotman
+
+
+##  Know issues:
+
+- Archiving hasn't been touched
+- IO stats does nto work on windows
+- Resizing terminal messes up the curses display
+- Common dir prefix does not work so while dir path is shown
+- Various other issues
+
+## Installation
+
+This program requires `psutil`, `pyfakefs`,`texttable`, `windows-curses`, `pyreadline`, `pyyaml`, and `pypsutil`.
+
+Run using `python plotman.py interactive`
