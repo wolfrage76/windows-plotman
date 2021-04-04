@@ -46,8 +46,6 @@ def split_path_prefix(items):
     prefix = '' #os.path.commonpath(items) #commonoath doesn't work on Windows
     if prefix == '/':
         return ('', items)
-    if prefix == '':
-        return ('', items)
     else:
         remainders = [ os.path.relpath(i, prefix) for i in items ]
         return (prefix, remainders)
