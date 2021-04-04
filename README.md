@@ -6,7 +6,7 @@ This is a work in progress. Please see the original linux version for additional
 
 https://github.com/ericaltendorf/plotman
 
-Please contact me at: chia@ifhya.com or join us on discord in the #chia channel: https://discord.gg/JESmva9R 
+Please contact me at: chia@ifhya.com or Wolfrage on discord in the #chia channel: https://discord.gg/JESmva9R - pop in and say hi!
 
 ## Known issues:
 
