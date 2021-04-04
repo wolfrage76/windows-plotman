@@ -168,10 +168,8 @@ def curses_main(stdscr):
                                 start_new_session=True)
 
         # Directory prefixes, for abbreviation
-        print(dir_cfg['tmp'])
-        tmp_prefix = '' #os.path.commonpath(dir_cfg['tmp']) #prefixes won't match with diff drive letters so overriding.
-        dst_prefix = '' #os.path.commonpath(dir_cfg['dst']) #prefixes won't match with diff drive letters so overriding.
-        
+        tmp_prefix = ''#os.path.commonpath(dir_cfg['tmp'])
+        dst_prefix = ''#os.path.commonpath(dir_cfg['dst'])
         if archiving_configured:
             arch_prefix = dir_cfg['archive']['rsyncd_path']
 

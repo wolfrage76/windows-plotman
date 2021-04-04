@@ -12,7 +12,7 @@ import os
 import re
 import threading
 import time
-import psutil      # apt-get install python-psutil
+import psutil
 import random
 import sys
 
@@ -29,7 +29,7 @@ def is_plotting_cmdline(cmdline):
     return (
         len(cmdline) >= 4
         #and 'python' in cmdline[0]
-        and 'chia.exe' in cmdline[0]
+        and 'chia2.exe' in cmdline[0]
         and 'plots' == cmdline[1]
         and 'create' == cmdline[2]
     )
@@ -88,7 +88,7 @@ class Job:
             # Parse command line args
             args = self.proc.cmdline()
             assert len(args) > 4
-            assert 'chia.exe' in args[0]
+            assert 'chia2.exe' in args[0]
             assert 'plots' == args[1]
             assert 'create' == args[2]
             args_iter = iter(args[3:])
@@ -133,6 +133,7 @@ class Job:
     def init_from_logfile(self):
         '''Read plot ID and job start time from logfile.  Return true if we
            find all the info as expected, false otherwise'''
+        print('self.logfile: ' + str(self.logfile))
         assert self.logfile
         # Try reading for a while; it can take a while for the job to get started as it scans
         # existing plot dirs (especially if they are NFS).
@@ -170,6 +171,7 @@ class Job:
         self.set_phase_from_logfile()
 
     def set_phase_from_logfile(self):
+    
         assert self.logfile
 
         # Map from phase number to subphase number reached in that phase.
@@ -178,7 +180,7 @@ class Job:
         # Phase 3 subphases are <started>, tables1&2, tables2&3, ...
         # Phase 4 subphases are <started>
         phase_subphases = {}
-    
+       
         with open(self.logfile, 'r') as f:
             for line in f:
                 # "Starting phase 1/4: Forward Propagation into tmp files... Sat Oct 31 11:27:04 2020"
