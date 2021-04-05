@@ -1,5 +1,7 @@
 # `windows plotman`: an attempt to get plotman to work on windows
 
+THIS IS A BETA.  Not ready for production use just yet.  Almost, but not quite there yet.
+
 This is a tool for managing Chia based on Plotman (https://github.com/ericaltendorf/plotman)
 
 This is a work in progress. Please see the original linux version for additional info:
