@@ -4,7 +4,7 @@ directories:
         # STDERR of all plot jobs).  In order to monitor progress, plotman
         # reads these logs on a regular basis, so using a fast drive is
         # recommended.
-        log: C:\Users\Wofl\.chia\mainnet\plotter
+        log: C:\chia
 
         # One or more directories to use as tmp dirs for plotting.  The
         # scheduler will use all of them and distribute jobs among them.
@@ -15,14 +15,14 @@ directories:
         # abbreviate and show just the uniquely identifying suffix.
         tmp:
                 - e:\1
-                - e:\2
-                - e:\3
-                - e:\4
                 - h:\1
+                - e:\2
+                - i:\1
+                - e:\3
                 - h:\2
-             
-          
-                
+                - i:\2
+                - e:\4
+
 
         # Optional: tmp2 directory.  If specified, will be passed to
         # chia plots create as -2.  Only one tmp2 directory is supported.
@@ -34,7 +34,6 @@ directories:
         # to minimize IO contention.
         dst:
                 - z:\
-                - g:\
                 - f:\
                             
                 
@@ -65,7 +64,7 @@ scheduling:
         tmpdir_max_jobs: 1
 
         # Don't run any jobs (across all temp dirs) more often than this.
-        global_stagger_m: 1
+        global_stagger_m: 35
 
         # How often the daemon wakes to consider starting a new plot job
         polling_time_s: 5
@@ -77,6 +76,6 @@ scheduling:
 plotting:
         k: 32
         e: False              # Use -e plotting option
-        n_threads: 4        # Threads per job
+        n_threads: 3        # Threads per job
         n_buckets: 128       # Number of buckets to split data into
         job_buffer: 6500     # Per job memory
