@@ -16,6 +16,9 @@ import psutil
 import random
 import sys
 
+class UnmatchedJobError(Exception):
+    pass
+
 def job_phases_for_tmpdir(d, all_jobs):
     '''Return phase 2-tuples for jobs running on tmpdir d'''
     return sorted([j.progress() for j in all_jobs if j.tmpdir == d])
@@ -73,7 +76,8 @@ class Job:
                         if proc.pid in cached_jobs_by_pid.keys():
                             jobs.append(cached_jobs_by_pid[proc.pid])  # Copy from cache
                         else:
-                            jobs.append(Job(proc, logroot))
+                            with contextlib.suppress(UnmatchedJobError):
+                                jobs.append(Job(proc, logroot))
             except (PermissionError, psutil.AccessDenied):
                 test=0
                 #print ("Permission error or access denied on process")
@@ -133,7 +137,8 @@ class Job:
     def init_from_logfile(self):
         '''Read plot ID and job start time from logfile.  Return true if we
            find all the info as expected, false otherwise'''
-        assert self.logfile
+        if not self.logfile:
+            raise UnmatchedJobError()
         # Try reading for a while; it can take a while for the job to get started as it scans
         # existing plot dirs (especially if they are NFS).
         found_id = False
